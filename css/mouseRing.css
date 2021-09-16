@@ -1,17 +1,9 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-body{
-    background:#333;
-    overflow:hidden;
-}
 #ring{
 	pointer-events: none;
     box-sizing: border-box;
     position: absolute;
-    width:200px;
-    height:200px;
+    width:100px;
+    height:100px;
     border:1px double white;
     border-radius: 50%;
     animation: roll 4s linear infinite;
