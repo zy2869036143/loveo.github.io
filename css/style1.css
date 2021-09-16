@@ -1,0 +1,35 @@
+#ring{
+	pointer-events: none;
+    box-sizing: border-box;
+    position: absolute;
+    width:100px;
+    height:100px;
+    border:1px double white;
+    border-radius: 50%;
+    animation: roll 4s linear infinite;
+    box-shadow:0 0 5px #1e90ff,0 0 10px #1e90ff,0 0 20px #1e90ff,inset 0 0 5px #1e90ff,inset 0 0 10px #1e90ff,inset 0 0 20px #1e90ff;
+    pointer-events: none;
+}
+@keyframes roll{
+    100%{
+        transform: rotate(-360deg);
+        filter:hue-rotate(360deg);
+    }
+}
+#ring .ringtext{
+	/* border: 1px solid border-left: ; */
+    box-sizing: border-box;
+    display:flex;
+    justify-content: center;
+    align-items: start;
+    width:100%;
+    height:100%;
+    color:#1e90ff;
+    position:absolute;
+    left:0;
+    top:0;
+    font-weight: bold;
+    font-size:5px;
+    filter:hue-rotate(calc(1deg * var(--r)));
+    transform:rotate(calc(1deg * var(--r)));
+}
