@@ -24,6 +24,7 @@ html {
 }
 body {
   margin: 0;
+  background-image: linear-gradient(to bottom right, rgb#000, rgb#fff);
 }
 main {
   display: block;
