@@ -1,9 +1,3 @@
-body {
-  background-image: linear-gradient(to bottom right, #7287fe, #8258ba);
-}
-#site-author-name {
-  color: #fff;
-}
 :root {
   --body-bg-color: #eee;
   --content-bg-color: #fff;
@@ -1175,7 +1169,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #4459ff;
+  background: #ff1369;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2575,5 +2569,73 @@ mjx-container + br {
   }
   .pagination {
     margin: 8px 0 0;
+  }
+}
+.site-author-name {
+  color: #5f4cc2;
+}
+.site-brand-container {
+  background-image: linear-gradient(to bottom right, #7287fe, #8258ba);
+}
+.header-inner {
+  background-image: linear-gradient(to bottom right, #7287fe, #8258ba);
+}
+.sidebar-inner.affix-top {
+  background-image: linear-gradient(to bottom right, #7287fe, #8278ba);
+}
+.post-block {
+  background-image: linear-gradient(to bottom right, #7287fe, #8278ba);
+}
+#ring {
+  pointer-events: none;
+  box-sizing: border-box;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border: 1px double #fff;
+  border-radius: 50%;
+  animation: roll 4s linear infinite;
+  box-shadow: 0 0 5px #1e90ff, 0 0 10px #1e90ff, 0 0 20px #1e90ff, inset 0 0 5px #1e90ff, inset 0 0 10px #1e90ff, inset 0 0 20px #1e90ff;
+  pointer-events: none;
+}
+#ring .ringtext {
+/* border: 1px solid border-left: ; */
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  width: 100%;
+  height: 100%;
+  color: #1e90ff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: bold;
+  font-size: 5px;
+  filter: hue-rotate(calc(1deg * var(--r)));
+  transform: rotate(calc(1deg * var(--r)));
+}
+@-moz-keyframes roll {
+  100% {
+    transform: rotate(-360deg);
+    filter: hue-rotate(360deg);
+  }
+}
+@-webkit-keyframes roll {
+  100% {
+    transform: rotate(-360deg);
+    filter: hue-rotate(360deg);
+  }
+}
+@-o-keyframes roll {
+  100% {
+    transform: rotate(-360deg);
+    filter: hue-rotate(360deg);
+  }
+}
+@keyframes roll {
+  100% {
+    transform: rotate(-360deg);
+    filter: hue-rotate(360deg);
   }
 }
