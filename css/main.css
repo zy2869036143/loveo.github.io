@@ -1169,7 +1169,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #ff4020;
+  background: #eb1a94;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2575,15 +2575,9 @@ mjx-container + br {
   color: #5f4cc2;
 }
 .site-brand-container {
-  background-image: linear-gradient(to bottom right, #7287fe, #8258ba);
+  background-image: linear-gradient(to bottom right, #000, #fff);
 }
 .header-inner {
-  background-image: linear-gradient(to bottom right, #7287fe, #8258ba);
-}
-.sidebar-inner.affix-top {
-  background-image: linear-gradient(to bottom right, #7287fe, #8278ba);
-}
-.post-block {
   background-image: linear-gradient(to bottom right, #000, #fff);
 }
 #ring {
