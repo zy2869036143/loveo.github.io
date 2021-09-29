@@ -14,26 +14,31 @@
 
 
 <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
-  <script src="/lib/pace/pace.min.js"></script>
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"lzyublog.top","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"lzyublog.top","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
   <meta name="description" content="第1章 计算机系统概论 第2章 计算机的运算方法2.1 无符号数与有符号数 计算机中的数均存放在寄存器中，通常称寄存器的位数为机器字长。  2.1.1 无符号数无符号数：寄存器中的每一位都用来存放数值。 2.1.2 有符号数 将符号数字化（0，1化）的数称为机器数，而带“+”，”-“号的数称为真值。 原码、补码、反码、移码都属于机器数。  有符号数：寄存器中的最高位用来标识符号，其余几位用来存放">
 <meta property="og:type" content="article">
 <meta property="og:title" content="计算机组织与结构">
 <meta property="og:url" content="http://lzyublog.top/2021/09/17/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/index.html">
-<meta property="og:site_name" content="王权">
+<meta property="og:site_name" content="No Born Talent">
 <meta property="og:description" content="第1章 计算机系统概论 第2章 计算机的运算方法2.1 无符号数与有符号数 计算机中的数均存放在寄存器中，通常称寄存器的位数为机器字长。  2.1.1 无符号数无符号数：寄存器中的每一位都用来存放数值。 2.1.2 有符号数 将符号数字化（0，1化）的数称为机器数，而带“+”，”-“号的数称为真值。 原码、补码、反码、移码都属于机器数。  有符号数：寄存器中的最高位用来标识符号，其余几位用来存放">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="c:/Users/lizeyu/AppData/Roaming/Typora/typora-user-images/image-20210924142252393.png">
+<meta property="og:image" content="c:/Users/lizeyu/AppData/Roaming/Typora/typora-user-images/image-20210924142317750.png">
+<meta property="og:image" content="c:/Users/lizeyu/AppData/Roaming/Typora/typora-user-images/image-20210924142820886.png">
+<meta property="og:image" content="c:/Users/lizeyu/AppData/Roaming/Typora/typora-user-images/image-20210924144911025.png">
+<meta property="og:image" content="c:/Users/lizeyu/AppData/Roaming/Typora/typora-user-images/image-20210924145441850.png">
+<meta property="og:image" content="c:/Users/lizeyu/AppData/Roaming/Typora/typora-user-images/image-20210924145853211.png">
 <meta property="article:published_time" content="2021-09-17T11:29:15.000Z">
-<meta property="article:modified_time" content="2021-09-23T13:06:07.222Z">
+<meta property="article:modified_time" content="2021-09-27T14:04:44.574Z">
 <meta property="article:author" content="SDUSoft李泽宇">
 <meta property="article:tag" content="计算机">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:/Users/lizeyu/AppData/Roaming/Typora/typora-user-images/image-20210924142252393.png">
 
 <link rel="canonical" href="http://lzyublog.top/2021/09/17/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/">
 
@@ -48,7 +53,7 @@
   };
 </script>
 
-  <title>计算机组织与结构 | 王权</title>
+  <title>计算机组织与结构 | No Born Talent</title>
   
 
 
@@ -99,10 +104,10 @@
 
     <a href="/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">王权</h1>
+      <h1 class="site-title">No Born Talent</h1>
       <span class="logo-line-after"><i></i></span>
     </a>
-      <p class="site-subtitle" itemprop="description">智学</p>
+      <p class="site-subtitle" itemprop="description">Stay Hungry, Stay Foolish.</p>
   </div>
 
   <div class="site-nav-right">
@@ -174,11 +179,11 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
       <meta itemprop="name" content="SDUSoft李泽宇">
-      <meta itemprop="description" content="学习更重要的是规划与方法">
+      <meta itemprop="description" content="FEAR? WORRY? NOT MY THING.">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="王权">
+      <meta itemprop="name" content="No Born Talent">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -199,7 +204,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-09-23 21:06:07" itemprop="dateModified" datetime="2021-09-23T21:06:07+08:00">2021-09-23</time>
+                <time title="修改时间：2021-09-27 22:04:44" itemprop="dateModified" datetime="2021-09-27T22:04:44+08:00">2021-09-27</time>
               </span>
 
           
@@ -357,6 +362,173 @@ N = S \times r^j\\</script><p><strong>浮点数的规格化</strong></p>
 </tbody>
 </table>
 </div>
+<h1 id="第三章-数字逻辑与集成电路"><a href="#第三章-数字逻辑与集成电路" class="headerlink" title="第三章 数字逻辑与集成电路"></a>第三章 数字逻辑与集成电路</h1><h2 id="3-1-基本逻辑"><a href="#3-1-基本逻辑" class="headerlink" title="3.1 基本逻辑"></a>3.1 基本逻辑</h2><p>在数字电路中使用<strong>逻辑代数</strong>，基本工具为<strong>布尔运算</strong>。</p>
+<p>逻辑代数与普通代数：</p>
+<p>共同点：都有变量和变量的运算</p>
+<p>不同点：逻辑代数取值只有0或1，基本运算只有与、或、非。</p>
+<h2 id="3-2-复合逻辑"><a href="#3-2-复合逻辑" class="headerlink" title="3.2 复合逻辑"></a>3.2 复合逻辑</h2><p>与、或、非、异或、同或。</p>
+<p><strong>异或</strong></p>
+<script type="math/tex; mode=display">
+符号:\bigoplus</script><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">A</th>
+<th style="text-align:center">B</th>
+<th style="text-align:center">F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>同或</strong></p>
+<script type="math/tex; mode=display">
+符号:\bigodot</script><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">A</th>
+<th style="text-align:center">B</th>
+<th style="text-align:center">F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="3-3-运算规则"><a href="#3-3-运算规则" class="headerlink" title="3.3 运算规则"></a>3.3 运算规则</h2><p>交换律、结合律、分配律</p>
+<h3 id="3-3-1-原变量的吸收率："><a href="#3-3-1-原变量的吸收率：" class="headerlink" title="3.3.1 原变量的吸收率："></a>3.3.1 原变量的吸收率：</h3><script type="math/tex; mode=display">
+A+AB=A</script><p>证明：</p>
+<script type="math/tex; mode=display">
+A+AB=A(1+B)=A*1=A</script><p>例如：</p>
+<script type="math/tex; mode=display">
+AB+CD+AB\overline{D}(E+F)=AB+CD</script><h3 id="3-3-2-反变量的吸收律："><a href="#3-3-2-反变量的吸收律：" class="headerlink" title="3.3.2 反变量的吸收律："></a>3.3.2 反变量的吸收律：</h3><script type="math/tex; mode=display">
+A+\overline{A}B=A+B</script><p>证明：</p>
+<script type="math/tex; mode=display">
+A+\overline{A}B=A+AB+\overline{A}B=A+B</script><p>例如：</p>
+<script type="math/tex; mode=display">
+A+\overline{A}BC+DC=A+BC+DC</script><h3 id="3-3-3-混合变量的吸收律："><a href="#3-3-3-混合变量的吸收律：" class="headerlink" title="3.3.3 混合变量的吸收律："></a>3.3.3 混合变量的吸收律：</h3><script type="math/tex; mode=display">
+AB+\overline{A}C+BC=AB+\overline{A}C</script><p>证明：</p>
+<script type="math/tex; mode=display">
+AB+\overline{A}C+BC=AB+\overline{A}C+(A+\overline{A})BC=AB+\overline{A}C+ABC+\overline{A}BC=AB+AC</script><p>例如：</p>
+<script type="math/tex; mode=display">
+AB+\overline{A}C+BCD=AB+\overline{A}C</script><h3 id="3-3-4-反演律"><a href="#3-3-4-反演律" class="headerlink" title="3.3.4 反演律"></a>3.3.4 反演律</h3><script type="math/tex; mode=display">
+\overline{AB}=\overline{A}+\overline{B}</script><script type="math/tex; mode=display">
+\overline{A+B}=\overline{A}\cdot\overline{B}</script><h2 id="3-4-基本定理"><a href="#3-4-基本定理" class="headerlink" title="3.4 基本定理"></a>3.4 基本定理</h2><h3 id="3-4-1-代入定理"><a href="#3-4-1-代入定理" class="headerlink" title="3.4.1 代入定理"></a>3.4.1 代入定理</h3><blockquote>
+<p><strong>在任何一个包含变量A的逻辑等式中，若以另外一个逻辑式代入式中所有A的位置，则等式仍然成立。</strong></p>
+</blockquote>
+<p>即变量的代换，等式依然成立。</p>
+<h3 id="3-4-2-对偶定理"><a href="#3-4-2-对偶定理" class="headerlink" title="3.4.2 对偶定理"></a>3.4.2 对偶定理</h3><blockquote>
+<p><strong>若两逻辑式相等，则它们的对偶式也相等。</strong></p>
+<p>将逻辑式Y中的”·”换为“+”, “+”换为“·”, “1”换为“0”, “0”换为”1”，就可以得到Y的对偶式。（变量符号不变）</p>
+</blockquote>
+<p>例如：</p>
+<script type="math/tex; mode=display">
+A(B+C)=A • B+A • C</script><script type="math/tex; mode=display">
+A+B • C=(A+B)(A+C)</script><h3 id="3-4-3-反演定理"><a href="#3-4-3-反演定理" class="headerlink" title="3.4.3 反演定理"></a>3.4.3 反演定理</h3><blockquote>
+<script type="math/tex; mode=display">
+对于任意一个逻辑式Y，若将其中的“\cdot”换成“+”， “+”换成“\cdot”，原变量换成反变量，反变量换成原变量，“1”换成“0”， “0”换成“1”，则得到的结果就是\overline{Y}。</script></blockquote>
+<p>例如</p>
+<script type="math/tex; mode=display">
+Y=A(B+C)+CD</script><script type="math/tex; mode=display">
+\overline{Y}=(\overline{A}+\overline{B}\cdot \overline{C})(\overline{C}+\overline{D})</script><p><strong>注意：</strong></p>
+<ol>
+<li><strong>保留原符号的运算次序，先与后或。</strong></li>
+<li><strong>不属于单个变量上的非号要保留。</strong></li>
+</ol>
+<h2 id="3-5-逻辑函数的表示法"><a href="#3-5-逻辑函数的表示法" class="headerlink" title="3.5 逻辑函数的表示法"></a>3.5 逻辑函数的表示法</h2><script type="math/tex; mode=display">
+四种表示方法\left\{
+\begin{aligned}逻辑电路图\\
+逻辑代数式\\
+真值表\\
+卡诺图
+\end{aligned}
+\right.</script><p><img src="C:\Users\lizeyu\AppData\Roaming\Typora\typora-user-images\image-20210924142252393.png" alt="image-20210924142252393"></p>
+<p><img src="C:\Users\lizeyu\AppData\Roaming\Typora\typora-user-images\image-20210924142317750.png" alt="image-20210924142317750"></p>
+<h2 id="3-6-逻辑函数的标准形式"><a href="#3-6-逻辑函数的标准形式" class="headerlink" title="3.6 逻辑函数的标准形式"></a>3.6 逻辑函数的标准形式</h2><p>对于一个任意的逻辑h函数通常有“积之和”和之积“两种基本表达形式，且都不唯一。</p>
+<h3 id="3-6-1-最小项及与或标准形式"><a href="#3-6-1-最小项及与或标准形式" class="headerlink" title="3.6.1 最小项及与或标准形式"></a>3.6.1 最小项及与或标准形式</h3><blockquote>
+<p><strong>最小项定义：</strong></p>
+<p>​    在一个具有n个变量的逻辑函数中，如果一个<strong>与项</strong>包含了所有<strong>n个</strong>的变量，而且每个变量都是以<strong>原变量或反变量的形式</strong>作为因子仅出现一次，那么这样的<strong>与项</strong>就称为该逻辑函数的一个<strong>最小项</strong>。</p>
+</blockquote>
+<p><img src="C:\Users\lizeyu\AppData\Roaming\Typora\typora-user-images\image-20210924142820886.png" alt="image-20210924142820886"></p>
+<p><strong>最小项的性质</strong></p>
+<ul>
+<li>对于任意一个最小项，有且仅有一组变量取值使得其值为1，其余取值均使得其值为0。</li>
+<li>对于不同的最小项，使其取值为1的变量取值均不相同。</li>
+<li>对于变量的任意一组取值，任意两个最小项的乘积为0。</li>
+<li>对于变量的任意一组取值，全体最小项的和恒为1。</li>
+</ul>
+<p><strong>最小项之和的标准形式</strong></p>
+<script type="math/tex; mode=display">
+若F(A,B,C)=AB\overline{C}+A\overline{B}\overline{C}+\overline{A}BC（结合上表\rightarrow）=m_6+m_4+m_3=\sum m(3,4,6)</script><h3 id="3-6-2-最大项及或与标准形式"><a href="#3-6-2-最大项及或与标准形式" class="headerlink" title="3.6.2 最大项及或与标准形式"></a>3.6.2 最大项及或与标准形式</h3><blockquote>
+<p><strong>最大项定义：</strong></p>
+<p>​    在一个具有n个变量的逻辑函数中，如果一个<strong>或项</strong>包含了所有<strong>n个</strong>的变量，而且每个变量都是以<strong>原变量或反变量的形式</strong>作为因子仅出现一次，那么这样的<strong>或项</strong>就称为该逻辑函数的一个<strong>最大项</strong>。</p>
+</blockquote>
+<p><strong>最大项的性质</strong></p>
+<ul>
+<li>对于任意一个最大项，有且仅有一组变量取值使得其值为0，其余取值均使得其值为1。</li>
+<li>对于不同的最小项，使其取值为0的变量取值均不相同。</li>
+<li>对于变量的任意一组取值，任意两个最大项的和为1。</li>
+<li>对于变量的任意一组取值，全体最大项的积恒为1。</li>
+</ul>
+<h2 id="3-7-逻辑函数的化简"><a href="#3-7-逻辑函数的化简" class="headerlink" title="3.7 逻辑函数的化简"></a>3.7 逻辑函数的化简</h2><p>逻辑函数的化简就是将复杂逻辑变成与之等价的简单逻辑。</p>
+<p>方法有<strong>代数化简法</strong>和<strong>卡诺图法</strong>。</p>
+<p><img src="C:\Users\lizeyu\AppData\Roaming\Typora\typora-user-images\image-20210924144911025.png" alt="image-20210924144911025"></p>
+<h3 id="3-7-1-代数化简法"><a href="#3-7-1-代数化简法" class="headerlink" title="3.7.1 代数化简法"></a>3.7.1 代数化简法</h3><p>根据公式的逻辑推导。但当变量数很多时，难以判断化简结果是否最简。</p>
+<h3 id="3-7-2-卡诺图法"><a href="#3-7-2-卡诺图法" class="headerlink" title="3.7.2 卡诺图法"></a>3.7.2 卡诺图法</h3><blockquote>
+<p><strong>卡诺图构建：</strong></p>
+<p>​        将n个输入变量的全部最小项用小方块阵列图表示，并将<strong>逻辑相邻</strong>的最小项放在几何相邻位置上，就得到了<strong>n变量的卡诺图</strong>。</p>
+</blockquote>
+<p><img src="C:\Users\lizeyu\AppData\Roaming\Typora\typora-user-images\image-20210924145441850.png" alt="image-20210924145441850"></p>
+<p><strong>卡诺图的化简规则</strong></p>
+<ol>
+<li>先找面积最大的区域进行化简。</li>
+<li>各最小项可重复利用。</li>
+<li>注意利用无所谓状态。</li>
+<li>圈完全部1后，化简结束。</li>
+</ol>
+<p><img src="C:\Users\lizeyu\AppData\Roaming\Typora\typora-user-images\image-20210924145853211.png" alt="image-20210924145853211"></p>
 
     </div>
 
@@ -440,7 +612,7 @@ N = S \times r^j\\</script><p><strong>浮点数的规格化</strong></p>
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC1%E7%AB%A0-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%AE%BA"><span class="nav-number">1.</span> <span class="nav-text">第1章 计算机系统概论</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text"> </span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC2%E7%AB%A0-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E8%BF%90%E7%AE%97%E6%96%B9%E6%B3%95"><span class="nav-number">3.</span> <span class="nav-text">第2章 计算机的运算方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-%E6%97%A0%E7%AC%A6%E5%8F%B7%E6%95%B0%E4%B8%8E%E6%9C%89%E7%AC%A6%E5%8F%B7%E6%95%B0"><span class="nav-number">3.1.</span> <span class="nav-text">2.1 无符号数与有符号数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-1-%E6%97%A0%E7%AC%A6%E5%8F%B7%E6%95%B0"><span class="nav-number">3.1.1.</span> <span class="nav-text">2.1.1 无符号数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-2-%E6%9C%89%E7%AC%A6%E5%8F%B7%E6%95%B0"><span class="nav-number">3.1.2.</span> <span class="nav-text">2.1.2 有符号数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-%E6%95%B0%E7%9A%84%E5%AE%9A%E7%82%B9%E8%A1%A8%E7%A4%BA%E5%92%8C%E6%B5%AE%E7%82%B9%E8%A1%A8%E7%A4%BA"><span class="nav-number">3.2.</span> <span class="nav-text">2.2 数的定点表示和浮点表示</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-1-%E5%AE%9A%E7%82%B9%E8%A1%A8%E7%A4%BA"><span class="nav-number">3.2.1.</span> <span class="nav-text">2.2.1 定点表示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-2-%E6%B5%AE%E7%82%B9%E8%A1%A8%E7%A4%BA"><span class="nav-number">3.2.2.</span> <span class="nav-text">2.2.2 浮点表示</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-%E5%AE%9A%E7%82%B9%E8%BF%90%E7%AE%97"><span class="nav-number">3.3.</span> <span class="nav-text">2.3 定点运算</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-1-%E7%A7%BB%E4%BD%8D%E8%BF%90%E7%AE%97"><span class="nav-number">3.3.1.</span> <span class="nav-text">2.3.1 移位运算</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC1%E7%AB%A0-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%AE%BA"><span class="nav-number">1.</span> <span class="nav-text">第1章 计算机系统概论</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text"> </span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC2%E7%AB%A0-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E8%BF%90%E7%AE%97%E6%96%B9%E6%B3%95"><span class="nav-number">3.</span> <span class="nav-text">第2章 计算机的运算方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-%E6%97%A0%E7%AC%A6%E5%8F%B7%E6%95%B0%E4%B8%8E%E6%9C%89%E7%AC%A6%E5%8F%B7%E6%95%B0"><span class="nav-number">3.1.</span> <span class="nav-text">2.1 无符号数与有符号数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-1-%E6%97%A0%E7%AC%A6%E5%8F%B7%E6%95%B0"><span class="nav-number">3.1.1.</span> <span class="nav-text">2.1.1 无符号数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-2-%E6%9C%89%E7%AC%A6%E5%8F%B7%E6%95%B0"><span class="nav-number">3.1.2.</span> <span class="nav-text">2.1.2 有符号数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-%E6%95%B0%E7%9A%84%E5%AE%9A%E7%82%B9%E8%A1%A8%E7%A4%BA%E5%92%8C%E6%B5%AE%E7%82%B9%E8%A1%A8%E7%A4%BA"><span class="nav-number">3.2.</span> <span class="nav-text">2.2 数的定点表示和浮点表示</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-1-%E5%AE%9A%E7%82%B9%E8%A1%A8%E7%A4%BA"><span class="nav-number">3.2.1.</span> <span class="nav-text">2.2.1 定点表示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-2-%E6%B5%AE%E7%82%B9%E8%A1%A8%E7%A4%BA"><span class="nav-number">3.2.2.</span> <span class="nav-text">2.2.2 浮点表示</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-%E5%AE%9A%E7%82%B9%E8%BF%90%E7%AE%97"><span class="nav-number">3.3.</span> <span class="nav-text">2.3 定点运算</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-1-%E7%A7%BB%E4%BD%8D%E8%BF%90%E7%AE%97"><span class="nav-number">3.3.1.</span> <span class="nav-text">2.3.1 移位运算</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%E4%B8%8E%E9%9B%86%E6%88%90%E7%94%B5%E8%B7%AF"><span class="nav-number">4.</span> <span class="nav-text">第三章 数字逻辑与集成电路</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-%E5%9F%BA%E6%9C%AC%E9%80%BB%E8%BE%91"><span class="nav-number">4.1.</span> <span class="nav-text">3.1 基本逻辑</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-%E5%A4%8D%E5%90%88%E9%80%BB%E8%BE%91"><span class="nav-number">4.2.</span> <span class="nav-text">3.2 复合逻辑</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-3-%E8%BF%90%E7%AE%97%E8%A7%84%E5%88%99"><span class="nav-number">4.3.</span> <span class="nav-text">3.3 运算规则</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-1-%E5%8E%9F%E5%8F%98%E9%87%8F%E7%9A%84%E5%90%B8%E6%94%B6%E7%8E%87%EF%BC%9A"><span class="nav-number">4.3.1.</span> <span class="nav-text">3.3.1 原变量的吸收率：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-2-%E5%8F%8D%E5%8F%98%E9%87%8F%E7%9A%84%E5%90%B8%E6%94%B6%E5%BE%8B%EF%BC%9A"><span class="nav-number">4.3.2.</span> <span class="nav-text">3.3.2 反变量的吸收律：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-3-%E6%B7%B7%E5%90%88%E5%8F%98%E9%87%8F%E7%9A%84%E5%90%B8%E6%94%B6%E5%BE%8B%EF%BC%9A"><span class="nav-number">4.3.3.</span> <span class="nav-text">3.3.3 混合变量的吸收律：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-4-%E5%8F%8D%E6%BC%94%E5%BE%8B"><span class="nav-number">4.3.4.</span> <span class="nav-text">3.3.4 反演律</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-4-%E5%9F%BA%E6%9C%AC%E5%AE%9A%E7%90%86"><span class="nav-number">4.4.</span> <span class="nav-text">3.4 基本定理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-1-%E4%BB%A3%E5%85%A5%E5%AE%9A%E7%90%86"><span class="nav-number">4.4.1.</span> <span class="nav-text">3.4.1 代入定理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-2-%E5%AF%B9%E5%81%B6%E5%AE%9A%E7%90%86"><span class="nav-number">4.4.2.</span> <span class="nav-text">3.4.2 对偶定理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-3-%E5%8F%8D%E6%BC%94%E5%AE%9A%E7%90%86"><span class="nav-number">4.4.3.</span> <span class="nav-text">3.4.3 反演定理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-5-%E9%80%BB%E8%BE%91%E5%87%BD%E6%95%B0%E7%9A%84%E8%A1%A8%E7%A4%BA%E6%B3%95"><span class="nav-number">4.5.</span> <span class="nav-text">3.5 逻辑函数的表示法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-6-%E9%80%BB%E8%BE%91%E5%87%BD%E6%95%B0%E7%9A%84%E6%A0%87%E5%87%86%E5%BD%A2%E5%BC%8F"><span class="nav-number">4.6.</span> <span class="nav-text">3.6 逻辑函数的标准形式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-6-1-%E6%9C%80%E5%B0%8F%E9%A1%B9%E5%8F%8A%E4%B8%8E%E6%88%96%E6%A0%87%E5%87%86%E5%BD%A2%E5%BC%8F"><span class="nav-number">4.6.1.</span> <span class="nav-text">3.6.1 最小项及与或标准形式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-6-2-%E6%9C%80%E5%A4%A7%E9%A1%B9%E5%8F%8A%E6%88%96%E4%B8%8E%E6%A0%87%E5%87%86%E5%BD%A2%E5%BC%8F"><span class="nav-number">4.6.2.</span> <span class="nav-text">3.6.2 最大项及或与标准形式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-7-%E9%80%BB%E8%BE%91%E5%87%BD%E6%95%B0%E7%9A%84%E5%8C%96%E7%AE%80"><span class="nav-number">4.7.</span> <span class="nav-text">3.7 逻辑函数的化简</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-7-1-%E4%BB%A3%E6%95%B0%E5%8C%96%E7%AE%80%E6%B3%95"><span class="nav-number">4.7.1.</span> <span class="nav-text">3.7.1 代数化简法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-7-2-%E5%8D%A1%E8%AF%BA%E5%9B%BE%E6%B3%95"><span class="nav-number">4.7.2.</span> <span class="nav-text">3.7.2 卡诺图法</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -449,14 +621,14 @@ N = S \times r^j\\</script><p><strong>浮点数的规格化</strong></p>
     <img class="site-author-image" itemprop="image" alt="SDUSoft李泽宇"
       src="/images/avatar.jpg">
   <p class="site-author-name" itemprop="name">SDUSoft李泽宇</p>
-  <div class="site-description" itemprop="description">学习更重要的是规划与方法</div>
+  <div class="site-description" itemprop="description">FEAR? WORRY? NOT MY THING.</div>
 </div>
 <div class="site-state-wrap motion-element">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-count">9</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
