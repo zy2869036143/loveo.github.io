@@ -1,224 +1,153 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.4.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/icon32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/icon16.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
-
-<link rel="stylesheet" href="/css/main.css">
-
-
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"lzyublog.top","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
-  </script>
-
-  <meta name="description" content="第1章 随机事件及其概率1.1 古典概型古典概型的定义：  基本事件个数有限。  每个基本事件等可能性发生。  那么事件A的概率可以表示为  P(A)&#x3D;\frac{A所包含的基本事件个数}{总的基本事件个数}  排列与组合： 排列有顺序，组合无次序  排列A_m^n&#x3D;P_m^n&#x3D;\frac{m!}{(m-n)!}(m\geq n) 全排列A_n&#x3D;P_n&#x3D;n! 组合C_n^r&#x3D;\frac{n!}{r">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>概率与统计 | No Born Talent</title><meta name="keywords" content="数学"><meta name="author" content="SDUSoft李泽宇"><meta name="copyright" content="SDUSoft李泽宇"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="第1章 随机事件及其概率1.1 古典概型古典概型的定义：  基本事件个数有限。  每个基本事件等可能性发生。  那么事件A的概率可以表示为  P(A)&#x3D;\frac{A所包含的基本事件个数}{总的基本事件个数}  排列与组合： 排列有顺序，组合无次序  排列A_m^n&#x3D;P_m^n&#x3D;\frac{m!}{(m-n)!}(m\geq n) 全排列A_n&#x3D;P_n&#x3D;n! 组合C_n^r&#x3D;\frac{n!}{r">
 <meta property="og:type" content="article">
 <meta property="og:title" content="概率与统计">
 <meta property="og:url" content="http://lzyublog.top/2021/09/23/%E6%A6%82%E7%8E%87%E4%B8%8E%E7%BB%9F%E8%AE%A1/index.html">
 <meta property="og:site_name" content="No Born Talent">
 <meta property="og:description" content="第1章 随机事件及其概率1.1 古典概型古典概型的定义：  基本事件个数有限。  每个基本事件等可能性发生。  那么事件A的概率可以表示为  P(A)&#x3D;\frac{A所包含的基本事件个数}{总的基本事件个数}  排列与组合： 排列有顺序，组合无次序  排列A_m^n&#x3D;P_m^n&#x3D;\frac{m!}{(m-n)!}(m\geq n) 全排列A_n&#x3D;P_n&#x3D;n! 组合C_n^r&#x3D;\frac{n!}{r">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg">
 <meta property="article:published_time" content="2021-09-23T08:06:32.000Z">
-<meta property="article:modified_time" content="2021-09-27T14:29:21.813Z">
+<meta property="article:modified_time" content="2021-10-05T10:19:20.829Z">
 <meta property="article:author" content="SDUSoft李泽宇">
 <meta property="article:tag" content="数学">
 <meta name="twitter:card" content="summary">
-
-<link rel="canonical" href="http://lzyublog.top/2021/09/23/%E6%A6%82%E7%8E%87%E4%B8%8E%E7%BB%9F%E8%AE%A1/">
-
-
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : false,
-    isPost : true,
-    lang   : 'zh-CN'
-  };
-</script>
-
-  <title>概率与统计 | No Born Talent</title>
-  
-
-
-
-
-
-
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://lzyublog.top/2021/09/23/%E6%A6%82%E7%8E%87%E4%B8%8E%E7%BB%9F%E8%AE%A1/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '概率与统计',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2021-10-05 18:19:20'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
   }
 
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
 
-</head>
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
 
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
-    </div>
-  </div>
-
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">No Born Talent</h1>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-      <p class="site-subtitle" itemprop="description">Stay Hungry, Stay Foolish.</p>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-    </div>
-  </div>
-</div>
-
-
-
-
-<nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
-
-  </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
-
-  </li>
-  </ul>
-</nav>
-
-
-
-
-</div>
-    </header>
-
-    
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-
-
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-
-          <div class="content post posts-expand">
-            
-
-    
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
   
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://lzyublog.top/2021/09/23/%E6%A6%82%E7%8E%87%E4%B8%8E%E7%BB%9F%E8%AE%A1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="SDUSoft李泽宇">
-      <meta itemprop="description" content="FEAR? WORRY? NOT MY THING.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="No Born Talent">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          概率与统计
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-09-23 16:06:32" itemprop="dateCreated datePublished" datetime="2021-09-23T16:06:32+08:00">2021-09-23</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-09-27 22:29:21" itemprop="dateModified" datetime="2021-09-27T22:29:21+08:00">2021-09-27</time>
-              </span>
-
-          
-            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span id="busuanzi_value_page_pv"></span>
-            </span>
-
-        </div>
-      </header>
-
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
     
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
     
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-        <h1 id="第1章-随机事件及其概率"><a href="#第1章-随机事件及其概率" class="headerlink" title="第1章 随机事件及其概率"></a>第1章 随机事件及其概率</h1><h2 id="1-1-古典概型"><a href="#1-1-古典概型" class="headerlink" title="1.1 古典概型"></a>1.1 古典概型</h2><p>古典概型的定义：</p>
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">9</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a></div></div></div><hr/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">No Born Talent</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">概率与统计</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-09-23T08:06:32.000Z" title="发表于 2021-09-23 16:06:32">2021-09-23</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-10-05T10:19:20.829Z" title="更新于 2021-10-05 18:19:20">2021-10-05</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="概率与统计"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="第1章-随机事件及其概率"><a href="#第1章-随机事件及其概率" class="headerlink" title="第1章 随机事件及其概率"></a>第1章 随机事件及其概率</h1><h2 id="1-1-古典概型"><a href="#1-1-古典概型" class="headerlink" title="1.1 古典概型"></a>1.1 古典概型</h2><p>古典概型的定义：</p>
 <ol>
 <li><p>基本事件个数有限。</p>
 </li>
@@ -296,335 +225,137 @@ n个**独立事件和**的概率公式:</script><p>P(A_1\cup A_2\cup…\cup A_n)
 </script><p>P(A_iB)=P(A_i)P(B|A_i)</p>
 <script type="math/tex; mode=display">
 </script><p>P(B)=\sum<em>{i=1}^{n}P(A_iB)=\sum</em>{i=1}^{n}P(A_i)P(B|A_i)</p>
-<p>$$<br>也可以将上述公式全概率公式理解为一些基本事件A的发生导致了B的发生。</p>
-<p>全概率公式关键在于<strong>数学模型</strong>与<strong>完备事件组</strong>。</p>
-
-    </div>
-
-    
-    
-    
-
-      <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/%E6%95%B0%E5%AD%A6/" rel="tag"># 数学</a>
-          </div>
-
-        
-
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/2021/09/18/Web%E6%8A%80%E6%9C%AF/" rel="prev" title="Web技术">
-      <i class="fa fa-chevron-left"></i> Web技术
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/2021/09/23/English-Speeches-and-Debates/" rel="next" title="English Speeches and Debates">
-      English Speeches and Debates <i class="fa fa-chevron-right"></i>
-    </a></div>
-    </div>
-      </footer>
-    
-  </article>
-  
-  
-  
-
-
-
-          </div>
-          
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
+<script type="math/tex; mode=display">
+也可以将上述公式全概率公式理解为一些基本事件A的发生导致了B的发生。
 
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
+全概率公式关键在于**数学模型**与**完备事件组**。
 
-  <aside class="sidebar">
-    <div class="sidebar-inner">
 
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
 
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC1%E7%AB%A0-%E9%9A%8F%E6%9C%BA%E4%BA%8B%E4%BB%B6%E5%8F%8A%E5%85%B6%E6%A6%82%E7%8E%87"><span class="nav-number">1.</span> <span class="nav-text">第1章 随机事件及其概率</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-%E5%8F%A4%E5%85%B8%E6%A6%82%E5%9E%8B"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 古典概型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-%E5%87%A0%E4%BD%95%E6%A6%82%E5%9E%8B%EF%BC%88%E5%8F%A4%E5%85%B8%E6%A6%82%E5%9E%8B%E7%9A%84%E6%8E%A8%E5%B9%BF%EF%BC%89"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 几何概型（古典概型的推广）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-%E6%A6%82%E7%8E%87%E7%9A%84%E5%85%AC%E7%90%86%E5%8C%96%E5%AE%9A%E4%B9%89"><span class="nav-number">1.3.</span> <span class="nav-text">1.3 概率的公理化定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-4-%E4%BA%8B%E4%BB%B6%E7%9A%84%E7%8B%AC%E7%AB%8B%E6%80%A7"><span class="nav-number">1.4.</span> <span class="nav-text">1.4 事件的独立性</span></a></li></ol></li></ol></div>
-      </div>
-      <!--/noindex-->
 
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="SDUSoft李泽宇"
-      src="/images/avatar.jpg">
-  <p class="site-author-name" itemprop="name">SDUSoft李泽宇</p>
-  <div class="site-description" itemprop="description">FEAR? WORRY? NOT MY THING.</div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">9</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
-        <span class="site-state-item-count">3</span>
-        <span class="site-state-item-name">标签</span></a>
-      </div>
-  </nav>
-</div>
 
+# 第二章 随机变量及其分布
 
 
-      </div>
 
-    </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
+## 2.1 随机变量及其分布函数
 
+随机变量：将样本空间中的所有可能结果映射为实数。**即随机变量是Ω→R上的映射。**</script><p>\forall\omega\in\Omega\longrightarrow\exist实数X(\omega)</p>
+<script type="math/tex; mode=display">
+随机变量用来表示随机试验中各种事件和它们的关系，是一种数学抽象。
 
-      </div>
-    </main>
+随机变量的引入是为了将随机事件数学化，从而引入积分，导数等强大的数学工具来辅助分析。
 
-    <footer class="footer">
-      <div class="footer-inner">
-        
+通常：大写字母为随机变量，小写字母为随机变量的取值。
 
-        
+**随机变量的分类**
 
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2021</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">SDUSoft李泽宇</span>
-</div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
-  </div>
+1. 离散型（所有取值可以一一列举）
+2. 非离散型------包括但不限于连续型（有无穷多取值，不能一一列举，充满一个区间）
 
+**随机变量的分布函数**</script><p>F(x)=P(X\leq x),-\infty&lt;x&lt;+\infty,为X的分布函数。</p>
+<script type="math/tex; mode=display">
+分布函数的性质
 
+1. F(x)单调不减
 
+2.</script><p>   0\leq F(x)\leq{1},\lim<em>{x\rightarrow+\infty}F(x)=1,\lim</em>{x\rightarrow-\infty}F(x)=0</p>
+<script type="math/tex; mode=display">
 
+3. F(x)右连续</script><p>   \lim_{x\rightarrow x_0^+}F(x)=F(x_0)</p>
+<script type="math/tex; mode=display">
 
+4. 
 
 
 
 
 
+## 2.2 离散型随机变量及其分布率
 
+若随机变量X的可能取值是有限个或可列各，称X为**离散型随机变量**。
 
+此时描述X的概率特性常用**概率分布**或**分布律**，即X在每一个可能的取值处所对应的概率。
 
+概率分布具有**非负性**和**归一性**。
 
+非负性：每个概率值都不小于0。             归一性：所有概率值之和为1。
 
+**离散型**随机变量的**分布函数**为**分段阶梯函数**，在X的可能取值点处发生间断，间断点为第一类跳跃间断点。</script><p>\int_{x}分布律=分布函数</p>
+<script type="math/tex; mode=display">
 
 
+## 2.3 常见离散型随机变量的分布
 
+**1. 超几何分布**
 
+>取物问题</script><p>P(X=k)=\frac{C<em>M^kC</em>{N-M}^{n-k}}{C_N^n}</p>
+<script type="math/tex; mode=display">
 
 
 
+**2.  几何分布**
 
+>重复几次实验第一次成功。</script><p>P(X=k)=(1-p)^{k-1}P,k=1,2\cdots\cdots\<br>\sum_{k=1}^{\infty}(1-p)^{k-1}P=1</p>
+<script type="math/tex; mode=display">
 
+**3. 两点分布(0,1分布)**
 
+|       X       |  0   |  1   |
+| :-----------: | :--: | :--: |
+| P<sub>k</sub> | 1-p  |  p   |</script><p>P(X=k)=p^k(1-p)^{1-k},k=0,1</p>
+<script type="math/tex; mode=display">
 
+**4. 二项分布   X～B(n, p)**
 
+n重伯努利实验，X表示事件A在n次实验中发生的次数。P(A)=p。</script><p>P_n(k)=P(X=k)=C_n^kP^k(1-p)^{n-k},k=0,1,\cdots,n</p>
+<script type="math/tex; mode=display">
+则称***X***服从参数为n,p的二项分布，即为X～B(n, p)。
 
+0,1分布是n=1的二项分布。
 
+**二项分布中最可能出现的次数**</script><p>p_k=P(X=k)=C_n^kp^k(1-p)^{n-k},k=0,1,\cdots,n</p>
+<script type="math/tex; mode=display">
+</script><p>\frac{p_{k-1}}{p_k}=\frac{(1-p)k}{p(n-k-1)}\leq1</p>
+<script type="math/tex; mode=display">
+</script><p>\frac{p<em>k}{p</em>{k+1}}=\frac{(1-p)(k+1)}{p(n-k)}\geq1</p>
+<script type="math/tex; mode=display">
+</script><p>result:(n+1)p-1\leq k\leq(n+1)p</p>
+<script type="math/tex; mode=display">
 
+**5. 泊松分布 X～Π(λ)**
 
+为了简化二项分布的计算，相当于二项分布的近似。</script><p>P(X=k)=e^{-\lambda}\frac{\lambda^k}{k!},k=0,1,2,\cdots\<br>记为X～\pi(\lambda)或P(\lambda)</p>
+<script type="math/tex; mode=display">
+**泊松定理（Possion）**</script><p>设np<em>n=\lambda&gt;0,设对固定的k,\lim</em>{n\rightarrow\infty}C_n^kp_n^k(1-p)^{(n-k)}=e^{-\lambda}\frac{\lambda^k}{k!},k=0,1,2,\cdots\</p>
+<script type="math/tex; mode=display">
+结论：二项分布的极限分布为泊松分布,n越大,p越小近似效果越好。
 
-    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
-    <span class="post-meta-divider">|</span>
-    <span id="busuanzi_container_site_uv">总访客数<span id="busuanzi_value_site_uv"></span>人</span>
-    <span class="post-meta-divider">|</span>
-<!-- 不蒜子计数初始值纠正 -->
-<script>
-$(document).ready(function() {
 
-    var int = setInterval(fixCount, 50);  // 50ms周期检测函数
-    var countOffset = 20000;  // 初始化首次数据
+**6. 多项分布**
 
-    function fixCount() {            
-       if (document.getElementById("busuanzi_container_site_pv").style.display != "none")
-        {
-            $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + countOffset); 
-            clearInterval(int);
-        }                  
-        if ($("#busuanzi_container_site_pv").css("display") != "none")
-        {
-            $("#busuanzi_value_site_uv").html(parseInt($("#busuanzi_value_site_uv").html()) + countOffset); // 加上初始数据 
-            clearInterval(int); // 停止检测
-        }  
-    }
-       	
-});
-</script> 
+**待查资料自我学习**
 
-        
-<div class="busuanzi-count">
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-user"></i>
-      </span>
-      <span class="site-uv" title="总访客量">
-        <span id="busuanzi_value_site_uv"></span>
-      </span>
-    </span>
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-eye"></i>
-      </span>
-      <span class="site-pv" title="总访问量">
-        <span id="busuanzi_value_site_pv"></span>
-      </span>
-    </span>
-</div>
 
 
 
 
+## 2.4 连续性随机变量及其分布
 
+连续型随机变量由于无法给出其每个取值的概率值，故无法像离散型随机变量那样给出其概率分布，它时通过给出“**概率密度函数**”的方式来刻画其概率分布。</script><p>若X是一个随机变量，若存在一个非负可积函数f(x)，使得F(x)=\int_{-\infty}^xf(t)dt,-\infty&lt;x&lt;+\infty则称F(x)是它的分布函数，f(x)是它的概率密度函数。</p>
+<script type="math/tex; mode=display">
 
+>概率为0(1)的事件尾部不发生(发生)。
 
 
-      </div>
-    </footer>
-  </div>
 
-  
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
+## 2.5 常见连续型随机变量的分布
 
-<script src="/js/utils.js"></script>
+**1. 均匀分布 X～U(a,b)**
 
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/pisces.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-      
-
-<script>
-  if (typeof MathJax === 'undefined') {
-    window.MathJax = {
-      loader: {
-        source: {
-          '[tex]/amsCd': '[tex]/amscd',
-          '[tex]/AMScd': '[tex]/amscd'
-        }
-      },
-      tex: {
-        inlineMath: {'[+]': [['$', '$']]},
-        tags: 'ams'
-      },
-      options: {
-        renderActions: {
-          findScript: [10, doc => {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
-              const display = !!node.type.match(/; *mode=display/);
-              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-              const text = document.createTextNode('');
-              node.parentNode.replaceChild(text, node);
-              math.start = {node: text, delim: '', n: 0};
-              math.end = {node: text, delim: '', n: 0};
-              doc.math.push(math);
-            });
-          }, '', false],
-          insertedScript: [200, () => {
-            document.querySelectorAll('mjx-container').forEach(node => {
-              let target = node.parentNode;
-              if (target.nodeName.toLowerCase() === 'li') {
-                target.parentNode.classList.add('has-jax');
-              }
-            });
-          }, '', false]
-        }
-      }
-    };
-    (function () {
-      var script = document.createElement('script');
-      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
-      script.defer = true;
-      document.head.appendChild(script);
-    })();
-  } else {
-    MathJax.startup.document.state(0);
-    MathJax.texReset();
-    MathJax.typeset();
-  }
-</script>
-
-    
-
-  
-
-</body>
-</html>
+**2.  指数分布 X～E(λ)**</script><p>f(x)=\left{<br>\begin{aligned}<br>&amp;\lambda e^{-\lambda x},&amp; &amp;x&gt;0&amp;\<br>&amp;0,&amp; &amp;其他&amp;<br>\end{aligned}<br>\right.\lambda&gt;0为常数</p>
+<p>$$<br>指数分布的无记忆性</p>
+<p><img src="C:\Users\lizeyu\AppData\Roaming\Typora\typora-user-images\image-20211005173033130.png" alt="image-20211005173033130"></p>
+<p><strong>3. 正态分布 X～N()</strong></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">SDUSoft李泽宇</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://lzyublog.top/2021/09/23/%E6%A6%82%E7%8E%87%E4%B8%8E%E7%BB%9F%E8%AE%A1/">http://lzyublog.top/2021/09/23/%E6%A6%82%E7%8E%87%E4%B8%8E%E7%BB%9F%E8%AE%A1/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://lzyublog.top" target="_blank">No Born Talent</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%95%B0%E5%AD%A6/">数学</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2021/09/23/English-Speeches-and-Debates/"><img class="prev-cover" src="/" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">English Speeches and Debates</div></div></a></div><div class="next-post pull-right"><a href="/2021/09/18/Web%E6%8A%80%E6%9C%AF/"><img class="next-cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Web技术</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2021/09/23/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/" title="离散数学"><img class="cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-09-23</div><div class="title">离散数学</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">SDUSoft李泽宇</div><div class="author-info__description">FEAR? WORRY? NOT MY THING.</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">9</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC1%E7%AB%A0-%E9%9A%8F%E6%9C%BA%E4%BA%8B%E4%BB%B6%E5%8F%8A%E5%85%B6%E6%A6%82%E7%8E%87"><span class="toc-number">1.</span> <span class="toc-text">第1章 随机事件及其概率</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-%E5%8F%A4%E5%85%B8%E6%A6%82%E5%9E%8B"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 古典概型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-%E5%87%A0%E4%BD%95%E6%A6%82%E5%9E%8B%EF%BC%88%E5%8F%A4%E5%85%B8%E6%A6%82%E5%9E%8B%E7%9A%84%E6%8E%A8%E5%B9%BF%EF%BC%89"><span class="toc-number">1.2.</span> <span class="toc-text">1.2 几何概型（古典概型的推广）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-%E6%A6%82%E7%8E%87%E7%9A%84%E5%85%AC%E7%90%86%E5%8C%96%E5%AE%9A%E4%B9%89"><span class="toc-number">1.3.</span> <span class="toc-text">1.3 概率的公理化定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-4-%E4%BA%8B%E4%BB%B6%E7%9A%84%E7%8B%AC%E7%AB%8B%E6%80%A7"><span class="toc-number">1.4.</span> <span class="toc-text">1.4 事件的独立性</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><div class="content"><a class="title" href="/2021/09/27/%E6%A6%82%E7%8E%87%E4%B8%8E%E7%BB%9F%E8%AE%A1-1/" title="概率与统计">概率与统计</a><time datetime="2021-09-27T13:29:20.000Z" title="发表于 2021-09-27 21:29:20">2021-09-27</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2021/09/23/Python%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86%E5%92%8C%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB/" title="Python数据采集和网络爬虫">Python数据采集和网络爬虫</a><time datetime="2021-09-23T13:04:25.000Z" title="发表于 2021-09-23 21:04:25">2021-09-23</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2021/09/23/Python%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB/" title="无题">无题</a><time datetime="2021-09-23T08:09:51.668Z" title="发表于 2021-09-23 16:09:51">2021-09-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/09/23/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/" title="离散数学"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="离散数学"/></a><div class="content"><a class="title" href="/2021/09/23/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/" title="离散数学">离散数学</a><time datetime="2021-09-23T08:07:36.000Z" title="发表于 2021-09-23 16:07:36">2021-09-23</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2021/09/23/English-Speeches-and-Debates/" title="English Speeches and Debates">English Speeches and Debates</a><time datetime="2021-09-23T08:06:53.000Z" title="发表于 2021-09-23 16:06:53">2021-09-23</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By SDUSoft李泽宇</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
