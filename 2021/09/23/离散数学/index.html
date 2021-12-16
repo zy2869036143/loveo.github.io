@@ -1,13 +1,13 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>离散数学 | No Born Talent</title><meta name="keywords" content="数学"><meta name="author" content="李泽宇"><meta name="copyright" content="李泽宇"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="第一章 图1.3 图的表示和同构1.3.1 图的表示 邻接表 邻接矩阵 关联矩阵  无向图的邻接矩阵总是对称的。 对于无向图来说，邻接矩阵每一行各位置的数字之和代表与该顶点相关联的边数，也代表该顶点的度减去它的环数。 1.3.2 图的同构存在一个映射将图A的点和相对应的边映射到B中的定点和边。 1.4 图的连通性 路径：从v0到vk的一个点边交替序列，称为从v0到vk一条路径。W&#x3D;v0e1v1 e">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>离散数学 | No Born Talent</title><meta name="keywords" content="数学"><meta name="author" content="李泽宇"><meta name="copyright" content="李泽宇"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="第一章 图简单图：无环、无多重边 多重图：无环、有多重边 伪图：有环、有多重边  有向图：允许有环，不允许有两不同顶点之间的同向多重边 有向多重图：允许有环，允许有多重边 悬垂顶点：$deg(v)&#x3D;1,v$ is called pendant.  孤立顶点：$deg(v) &#x3D; 1,v$ is called isolated.   握手定理：  \sum_{v\in V}deg(v)&#x3D;2e完全图$K">
 <meta property="og:type" content="article">
 <meta property="og:title" content="离散数学">
 <meta property="og:url" content="http://lzyublog.top/2021/09/23/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/index.html">
 <meta property="og:site_name" content="No Born Talent">
-<meta property="og:description" content="第一章 图1.3 图的表示和同构1.3.1 图的表示 邻接表 邻接矩阵 关联矩阵  无向图的邻接矩阵总是对称的。 对于无向图来说，邻接矩阵每一行各位置的数字之和代表与该顶点相关联的边数，也代表该顶点的度减去它的环数。 1.3.2 图的同构存在一个映射将图A的点和相对应的边映射到B中的定点和边。 1.4 图的连通性 路径：从v0到vk的一个点边交替序列，称为从v0到vk一条路径。W&#x3D;v0e1v1 e">
+<meta property="og:description" content="第一章 图简单图：无环、无多重边 多重图：无环、有多重边 伪图：有环、有多重边  有向图：允许有环，不允许有两不同顶点之间的同向多重边 有向多重图：允许有环，允许有多重边 悬垂顶点：$deg(v)&#x3D;1,v$ is called pendant.  孤立顶点：$deg(v) &#x3D; 1,v$ is called isolated.   握手定理：  \sum_{v\in V}deg(v)&#x3D;2e完全图$K">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg">
 <meta property="article:published_time" content="2021-09-23T08:07:36.000Z">
-<meta property="article:modified_time" content="2021-12-07T09:34:59.224Z">
+<meta property="article:modified_time" content="2021-12-16T12:17:36.254Z">
 <meta property="article:author" content="李泽宇">
 <meta property="article:tag" content="数学">
 <meta name="twitter:card" content="summary">
@@ -58,7 +58,7 @@
   isHome: false,
   isHighlightShrink: false,
   isToc: true,
-  postUpdate: '2021-12-07 17:34:59'
+  postUpdate: '2021-12-16 20:17:36'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -147,31 +147,87 @@
       }
     }
     detectApple()
-    })(window)</script><meta name="generator" content="Hexo 5.4.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/ava.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">9</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a></div></div></div><hr/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">No Born Talent</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">离散数学</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-09-23T08:07:36.000Z" title="发表于 2021-09-23 16:07:36">2021-09-23</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-12-07T09:34:59.224Z" title="更新于 2021-12-07 17:34:59">2021-12-07</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="离散数学"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="第一章-图"><a href="#第一章-图" class="headerlink" title="第一章 图"></a>第一章 图</h1><h2 id="1-3-图的表示和同构"><a href="#1-3-图的表示和同构" class="headerlink" title="1.3 图的表示和同构"></a>1.3 图的表示和同构</h2><h3 id="1-3-1-图的表示"><a href="#1-3-1-图的表示" class="headerlink" title="1.3.1 图的表示"></a><strong>1.3.1 图的表示</strong></h3><ol>
-<li>邻接表</li>
-<li>邻接矩阵</li>
-<li>关联矩阵</li>
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/ava.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">9</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a></div></div></div><hr/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">No Born Talent</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">离散数学</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-09-23T08:07:36.000Z" title="发表于 2021-09-23 16:07:36">2021-09-23</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-12-16T12:17:36.254Z" title="更新于 2021-12-16 20:17:36">2021-12-16</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="离散数学"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="第一章-图"><a href="#第一章-图" class="headerlink" title="第一章 图"></a>第一章 图</h1><p>简单图：无环、无多重边</p>
+<p>多重图：无环、有多重边</p>
+<p>伪图：有环、有多重边</p>
+<p><img src="离散数学/image-20211216142517821.png" alt="image-20211216142517821"></p>
+<p>有向图：允许有环，不允许有两不同顶点之间的同向多重边</p>
+<p>有向多重图：允许有环，允许有多重边</p>
+<p>悬垂顶点：$deg(v)=1,v$ is called pendant. </p>
+<p>孤立顶点：$deg(v) = 1,v$ is called isolated.  </p>
+<p>握手定理：</p>
+<script type="math/tex; mode=display">
+\sum_{v\in V}deg(v)=2e</script><p>完全图$K_n$ </p>
+<p>圈图$C_n, n&gt;2$</p>
+<p>轮图$W_n, n&gt;2$</p>
+<p>立方图$Q_n$</p>
+<p>二分图Bipartite Graph</p>
+<p>完全二分图$K_m ,_n$</p>
+<p>正则图Regular Graph：图中每一个顶点都拥有相同的度(对于简单图而言)</p>
+<p>n阶正则图：正则图中每个顶点的度均为n。</p>
+<p>子图</p>
+<p>边导出子图</p>
+<p>点导出子图</p>
+<p>补图</p>
+<blockquote>
+<p>设<em>G</em>是具有<em>n</em>个顶点的简单图，从这<em>n</em>个顶点构成的完全图$K_n$中删去<em>G</em>的所有边，但保留顶点集<em>V</em>(<em>G</em>)所得到的图称为<em>G</em>的<strong>补图</strong>，简称<em>G</em>的补，记为～<em>G</em>。</p>
+</blockquote>
+<p>图的并 union</p>
+<blockquote>
+<p>顶点之并，边之并</p>
+</blockquote>
+<h2 id="1-3-图的表示和同构"><a href="#1-3-图的表示和同构" class="headerlink" title="1.3 图的表示和同构"></a>1.3 图的表示和同构</h2><h3 id="1-3-1-图的表示"><a href="#1-3-1-图的表示" class="headerlink" title="1.3.1 图的表示"></a><strong>1.3.1 图的表示</strong></h3><ol>
+<li>邻接表      Adjacency Lists</li>
+<li>邻接矩阵  Adjacency Matrices</li>
+<li>关联矩阵  Incidence Matrices</li>
 </ol>
-<p>无向图的邻接矩阵总是对称的。</p>
-<p>对于无向图来说，邻接矩阵每一行各位置的数字之和代表与该顶点相关联的边数，也代表该顶点的度减去它的环数。</p>
+<p>无向图的<strong>邻接矩阵</strong>总是对称的。</p>
+<p>带有$n$个顶点的简单图的邻接矩阵具有$n!$种不同表示。</p>
+<p>对于无向图来说，<strong>邻接矩阵每一行各位置的数字之和</strong>代表与该顶点相关联的边数，也代表<strong>该顶点的度减去它的环数</strong>。</p>
 <h3 id="1-3-2-图的同构"><a href="#1-3-2-图的同构" class="headerlink" title="1.3.2 图的同构"></a><strong>1.3.2 图的同构</strong></h3><p>存在一个映射将图A的点和相对应的边映射到B中的定点和边。</p>
+<p>同构图中的<strong>重要不变量</strong>：（必要条件）</p>
+<ul>
+<li>具有相同的顶点数</li>
+<li>具有相同的边数</li>
+<li>具有有相同的顶点度</li>
+<li>具有相同的连通分支数目及其大小</li>
+<li>具有相同长度的简单回路</li>
+</ul>
 <h2 id="1-4-图的连通性"><a href="#1-4-图的连通性" class="headerlink" title="1.4 图的连通性"></a>1.4 图的连通性</h2><blockquote>
-<p><strong>路径</strong>：从v<sub>0</sub>到v<sub>k</sub>的一个点边交替序列，称为从v<sub>0</sub>到v<sub>k</sub>一条<strong>路径</strong>。W=<em>v</em>0<em>e</em>1<em>v</em>1 <em>e</em>2 <em>v</em>2…<em>ek</em> <em>vk</em></p>
+<p><strong>路径</strong>：从v<sub>0</sub>到v<sub>k</sub>的一个点边交替序列，称为从v<sub>0</sub>到v<sub>k</sub>一条<strong>路径</strong>。$W= v_0e_1v_1e_2v_2\dots e_kv_k$</p>
+<p>路径的逆：$W^{-1}$</p>
+<p>路径的拼接：$v_ke_k\dots v_le_l$, $WW^1$ </p>
 <p><strong>路径的长</strong>：边的数目称为<strong>路经的长</strong>。</p>
-<p><strong>节</strong>：路径W的一个子序列构成的路径称为W的<strong>节</strong>。</p>
+<p><strong>节</strong>：路径W的一个子序列构成的路径称为W的<strong>节</strong>。$v_ie_i\dots v_je_j$</p>
 <p><strong>迹</strong>：路径中的边互不相同，称该路径为<strong>迹</strong>。</p>
 <p><strong>路</strong>：路径中的点互不相同，称该路径为<strong>路</strong>。</p>
 <p><strong>闭路径</strong>：路径中的起点和终点为同一个点，称该路径为<strong>闭路径</strong>，否则称为<strong>开路径</strong>。</p>
 <p><strong>闭迹</strong>：迹中的起点和终点为同一个点，称该迹为<strong>闭迹</strong>，否则称为<strong>开迹</strong>。<strong>闭迹又称回路。</strong></p>
 <p><strong>圈</strong>：闭迹中的点除了起点和终点为同一点外，其他再无相同的点，则称该闭迹为<strong>圈或者k圈</strong>（有k个<strong>不同</strong>点）。k为偶数称偶圈，k为奇数称奇圈。</p>
+<p>$\omiga G$</p>
 </blockquote>
 <p><strong>定理1 若图G中每个顶点的度至少为2，则G中必有圈。</strong></p>
-<p><strong>证明1 略</strong></p>
+<p><strong>证明1 </strong></p>
+<blockquote>
+<p>取图$G$中某一顶点$v_1$，因为$deg(v)\ge 2$，所以$v_1$一定与某一之前未取到的顶点$v_2$相连。同理$v_2$一定与某一之前未取到的顶点$v_3$相连 $\dots\dots $</p>
+<p>因为图中顶点个数是有限的，所以伴随上述过程一直进行，必然会取到一个点$v_k$，$v_k$满足以下条件：与$v_k$相连的所有顶点都在<strong>{</strong>$V | v_i\in V, i=1,2,\dots k-1$<strong>}</strong>中。此时就产生了圈。</p>
+</blockquote>
 <p>图中两点间存在路径，则称该两点是联通的。若图G中任意两点都是联通的，则称图G是联通的。</p>
 <p>连通分支：相当于等价类，将所有联通的点和边划分为一部分。图G的连通分支数常用<em>ω(G)</em>表示。</p>
 <p>两点间路径的长称为该两点间的距离。</p>
 <p><strong>定理2 一个图是二分图，当且仅当G中不含有奇圈。</strong></p>
-<p><strong>证明2 略</strong></p>
+<p><strong>证明2</strong></p>
+<blockquote>
+<p>已知图G为二分图$\rarr$G中不含有奇圈</p>
+<ol>
+<li>若图G中不含有圈，所以G中也不含有奇圈。</li>
+<li>若图G中含有圈，从圈上任意取一点，设为起始点$v_0$，圈为$C=v_0v_1v_2\dots v_kv_0$。因为G为二分图，所以G=<strong>{</strong> $V_1, V_2$ <strong>}</strong>。假设$v_0\in V_1$，则$v_i\in V_1, i=2,4,6,\dots$，$v_j\in V_2, j=1,3,5\dots$且$v_k \in V_2$。所以$k$为奇数，$|C|=k+1$。所以$C$为偶圈。</li>
+</ol>
+<p>已知图G中不含有奇圈$\rarr$ G为二分图</p>
+<p>设G为连通图，否则可针对每个连通分支应用以下方法：</p>
+<p>设$u\in V(G)$，令：<strong>$V_1 $= {$v \in V(G) | d(u,v) \% 2=0 $}</strong>，<strong>$V_2$= {$v \in V(G) | d(u,v) \% 2=1 $}</strong></p>
+<p>下面</p>
+</blockquote>
 <p><strong>定理3 设G是具有n个定点的简单图，若G有<em>ε</em>条边，<em>ω</em>个连通分支，则</strong></p>
 <script type="math/tex; mode=display">
 n-\omega\leqε\leq\frac{1}{2}(n-\omega)(n-\omega+1)</script><p><strong>证明3 略</strong></p>
@@ -180,15 +236,20 @@ n-\omega\leqε\leq\frac{1}{2}(n-\omega)(n-\omega+1)</script><p><strong>证明3 �
 <p>节点）。从连通图里删除割点，就产生不连通的子图。</p>
 <p><strong>桥(割边)</strong>：把一旦删除就产生带有比原图更多的连通分支的子图的边称为桥或割边</p>
 </blockquote>
-<h2 id="1-5-欧拉通路与哈密顿通路"><a href="#1-5-欧拉通路与哈密顿通路" class="headerlink" title="1.5 欧拉通路与哈密顿通路"></a>1.5 欧拉通路与哈密顿通路</h2><p><strong>定理1 连通多重图具有欧拉回路当且仅当它的每个顶点都有偶数度。</strong></p>
+<p>单向连通图</p>
+<p>双向连通图</p>
+<p>强连通图</p>
+<p><strong>定理4 设G是一个图（允许带有有向边 或者无向边，自环或者多重边）。G的顶点依次标识为$v_1,v_2,\dots, v_n$，G的邻接矩阵为$A$，则从$v_i$ 到$v_j$的长度为$r$的不同路径的数目为$A^r$的第$(i，j)$项。</strong></p>
+<h2 id="1-5-欧拉通路与哈密顿通路"><a href="#1-5-欧拉通路与哈密顿通路" class="headerlink" title="1.5 欧拉通路与哈密顿通路"></a>1.5 欧拉通路与哈密顿通路</h2><p>关键词：欧拉通路，欧拉回路，欧拉图，半欧拉图；哈密顿回路，哈密顿通路，哈密顿图，半哈密顿图</p>
+<p><strong>定理1 连通多重图具有欧拉回路当且仅当它的每个顶点都有偶数度。</strong></p>
 <p><strong>定理2 连通多重图具有欧拉通路而无欧拉回路，当且仅当它恰有两个奇数度顶点。</strong>其中一个为起始点，另一个为终点。</p>
 <p><strong>定理1-1 一个没有孤立顶点的有向多重图含有欧拉回路的充要条件是：该图是弱联通的；每个顶点的入度和出度相等。</strong></p>
 <p><strong>定理2-2 一个没有孤立顶点的有向多重图含有欧拉通路而无欧拉回路的充要条件是：该图是弱联通的；除去两个顶点外，每个顶点的入度和出度相等，这两个顶点中一个入度比出度大1，另一个出度比入度大1。</strong></p>
-<p><strong>定理3 狄拉克定理 如果G是带有n个顶点的连通简单图，其中n&gt;=3，则G有哈密顿回路的充分条件是每个顶点的度都至少为n/2。</strong></p>
-<p><strong>引理：设G是简单图，顶点u，v是一对不相邻的顶点，则满足deg(u)+deg(v)&gt;=n，则G是哈密顿图当且仅当G+uv是哈密顿图。</strong></p>
-<p><strong>定理4 奥尔定理 如果G是带n个顶点的连通简单图，其中n&gt;=3，并且对于G中每一对不相邻的顶点u，v来说，都有deg(u)+deg(v)&gt;=n，则G有哈密顿回路。</strong></p>
-<p>设G是一个图，反复连接d(u)+d(u)&gt;=n的不相邻顶点u，v，直到没有这样的顶点为止，得到的图成为图G的闭包，记作C(G)。</p>
-<p><strong>定理5 简单图G是哈密顿图当且仅当C(G)是哈密顿图。</strong></p>
+<p><strong>定理3 狄拉克定理 如果G是带有$n$个顶点的连通简单图，其中$n\ge3$，则G有哈密顿回路的充分条件是每个顶点的度都至少为$\frac{n}{2}$。</strong></p>
+<p><strong>引理：设G是简单图，顶点u，v是一对不相邻的顶点，则满足$deg(u)+deg(v)&gt;=n$，则G是哈密顿图当且仅当G+uv是哈密顿图。</strong></p>
+<p><strong>定理4 奥尔定理 如果G是带n个顶点的连通简单图，其中n&gt;=3，并且对于G中每一对不相邻的顶点u，v来说，都有$deg(u)+deg(v)&gt;=n$，则G有哈密顿回路。</strong></p>
+<p>设$G$是一个图，反复连接$d(u)+d(u)\ge n$的不相邻顶点$u$，$v$，直到没有这样的顶点为止，得到的图成为图$G$的闭包，记作$C(G)$。</p>
+<p><strong>定理5 简单图$G$是哈密顿图当且仅当$C(G)$是哈密顿图。</strong></p>
 <p>哈密顿图的必要条件</p>
 <p><strong>定理6 设G是哈密顿图，则对于顶点集V的任一非空真子集S，均有</strong></p>
 <script type="math/tex; mode=display">
@@ -197,16 +258,34 @@ n-\omega\leqε\leq\frac{1}{2}(n-\omega)(n-\omega+1)</script><p><strong>证明3 �
 <p>加权图两点间的的路径长度：边的权值之和</p>
 </blockquote>
 <p><strong>狄克斯特拉算法</strong></p>
-<h2 id="1-7-平面图"><a href="#1-7-平面图" class="headerlink" title="1.7 平面图"></a>1.7 平面图</h2><p>平面图：如果一个图可以被画在平面上，使得它的边仅在顶点处相交，则称这个图为平面图，或者说它是可平面嵌入的。</p>
-<p>平面图的这样一种画法被称为图的平面表示。</p>
-<p>平面图的平面嵌入称为平图。</p>
-<p>平面图的平面表示将平面划分为多个面(region)，其中包括一个无界面(unbounded region)。</p>
-<p>一条连续的，自身不相交的封闭曲线称为Jordon曲线。任何连接Jordon曲线的内点与外点的曲线，必与Jordon曲线相交。</p>
-<p><strong>欧拉公式：含有v个顶点，e条边，r个面的平面连通简单图G中存在——r=e-v+2。</strong></p>
-<p>给定平面连通图G，G的所有平面嵌入具有相同的面数。</p>
+<h2 id="1-7-平面图"><a href="#1-7-平面图" class="headerlink" title="1.7 平面图"></a>1.7 平面图</h2><p>平面图：如果一个图可以被画在平面上，使得它的边仅在顶点处相交，则称这个图为平面图，或者说它是<strong>可平面嵌入的</strong>。平面图的这样一种画法被称为图的平面表示。平面图的<strong>平面嵌入</strong>称为<strong>平图</strong>。</p>
+<p>平面图的<strong>平面表示</strong>将平面划分为<strong>多个面</strong>(region)，其中包括一个<strong>无界面</strong>(unbounded region)。</p>
+<p>一条连续的，自身不相交的封闭曲线称为<strong>Jordon曲线</strong>。任何连接Jordon曲线的内点与外点的曲线，必与Jordon曲线相交。</p>
+<p><strong>欧拉公式：含有$v$个顶点，$e$条边，$r$个面的平面连通简单图G中存在：$r=e-v+2$。</strong></p>
+<p>给定平面连通图$G$，$G$的所有平面嵌入具有相同的面数。</p>
 <p><strong>平面图的握手定理：平面图中两倍的边数等于所有面的度数之和。</strong></p>
 <script type="math/tex; mode=display">
-2e=\sum_{所有区域R}deg(R)</script><p><strong>理1 如果G是一个连通的平面简单图，那么G一定有一个度数不大于5的顶点。</strong></p>
+2e=\sum_{所有区域R}deg(R)</script><p><strong>定理1 有$v$个顶点，$e$条边，r个面的平面图G中，n&gt;=3时，$e\le3v-6$。</strong></p>
+<p>证明1</p>
+<blockquote>
+<p>因为每个平面的度至少为3，所以：$2e=\sum deg(R) \ge3r$ </p>
+<p>又因为$r=e-v+2$，所以$e\le3v-6$</p>
+</blockquote>
+<p><strong>定理2 如果G是一个连通的平面简单图，那么G一定有一个度数不大于5的顶点。</strong></p>
+<blockquote>
+<p>如果G的所有顶点度数都大于5，则$ 6v\le\sum deg(v)=2e \le6v-12$</p>
+<p>矛盾 。</p>
+</blockquote>
+<p><strong>初等细分</strong></p>
+<p><strong>同胚</strong> homeomorphic</p>
+<p><strong>定理3 一个图是平面图当且仅当它不包含同胚与$K_3,_3$和$K_5$的子图。</strong></p>
+<h2 id="1-8-图着色"><a href="#1-8-图着色" class="headerlink" title="1.8 图着色"></a>1.8 图着色</h2><p>关键词：色数(chromatic number)</p>
+<p>对一个<strong>图</strong>$G$的<strong>顶点</strong>着色，使没有任何两个相邻顶点着上相同的颜色，称为图的<strong>正常着色</strong>，此过程中所用颜色种数为$k$，称$G$是<strong>k可着色</strong>的。$k$的最小值即为色数记为，称$G$是<strong>$k$色</strong>的。</p>
+<p>地图：一个没有割边的连通平面图称为地图。</p>
+<p>设$G$是一个<strong>地图</strong>，对$G$的每个<strong>平面</strong>着色，使得没有任何两个相邻平面着上相同的颜色，称为$G$的<strong>正常面着色</strong>，此过程中所用的颜色种数为$k$，称为$G$是<strong>$k$面可着色</strong>的。k的最小值即为$G$的<strong>面色数</strong>，记为，称$G$是$k$面色的。</p>
+<p>平面图的dual graph</p>
+<p><strong>四色定理</strong>：任何平面图都是4可着色的。</p>
+<p>五色定理：任何无自环的平面图都是5可着色的。</p>
 <h1 id="chapter-2-counting"><a href="#chapter-2-counting" class="headerlink" title="chapter 2 counting"></a>chapter 2 counting</h1><h2 id="2-2-The-Pigeonhole-Principle"><a href="#2-2-The-Pigeonhole-Principle" class="headerlink" title="2.2 The Pigeonhole Principle"></a>2.2 The Pigeonhole Principle</h2><p>Definition:</p>
 <blockquote>
 <p>If $k$ is a positive integer and $k+1$ or more objects are placed into $k$ boxes, then there is at least one box containing at least two or more objects of the objects.</p>
@@ -271,7 +350,7 @@ n-\omega\leqε\leq\frac{1}{2}(n-\omega)(n-\omega+1)</script><p><strong>证明3 �
 </li>
 </ol>
 <p>Recurrence Relation: Using previous information to conclude the current situation. In other words, the current situation is partly defined by the previously happened events but with some variants.</p>
-</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">李泽宇</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://lzyublog.top/2021/09/23/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/">http://lzyublog.top/2021/09/23/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://lzyublog.top" target="_blank">No Born Talent</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%95%B0%E5%AD%A6/">数学</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2021/09/23/Python%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB/"><img class="prev-cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info"></div></div></a></div><div class="next-post pull-right"><a href="/2021/09/23/English-Speeches-and-Debates/"><img class="next-cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">English Speeches and Debates</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2021/09/23/%E6%A6%82%E7%8E%87%E4%B8%8E%E7%BB%9F%E8%AE%A1/" title="概率与统计"><img class="cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-09-23</div><div class="title">概率与统计</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/ava.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">李泽宇</div><div class="author-info__description">软件定义世界，数据驱动未来。</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">9</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E5%9B%BE"><span class="toc-number">1.</span> <span class="toc-text">第一章 图</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-%E5%9B%BE%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E5%90%8C%E6%9E%84"><span class="toc-number">1.1.</span> <span class="toc-text">1.3 图的表示和同构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-1-%E5%9B%BE%E7%9A%84%E8%A1%A8%E7%A4%BA"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.3.1 图的表示</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-2-%E5%9B%BE%E7%9A%84%E5%90%8C%E6%9E%84"><span class="toc-number">1.1.2.</span> <span class="toc-text">1.3.2 图的同构</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-4-%E5%9B%BE%E7%9A%84%E8%BF%9E%E9%80%9A%E6%80%A7"><span class="toc-number">1.2.</span> <span class="toc-text">1.4 图的连通性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-5-%E6%AC%A7%E6%8B%89%E9%80%9A%E8%B7%AF%E4%B8%8E%E5%93%88%E5%AF%86%E9%A1%BF%E9%80%9A%E8%B7%AF"><span class="toc-number">1.3.</span> <span class="toc-text">1.5 欧拉通路与哈密顿通路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-6-%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98"><span class="toc-number">1.4.</span> <span class="toc-text">1.6 最短路径问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-7-%E5%B9%B3%E9%9D%A2%E5%9B%BE"><span class="toc-number">1.5.</span> <span class="toc-text">1.7 平面图</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#chapter-2-counting"><span class="toc-number">2.</span> <span class="toc-text">chapter 2 counting</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-The-Pigeonhole-Principle"><span class="toc-number">2.1.</span> <span class="toc-text">2.2 The Pigeonhole Principle</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-5-Generalized-Permutations-and-Combinations"><span class="toc-number">2.2.</span> <span class="toc-text">2.5 Generalized Permutations and Combinations</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#chapter-3-anvanced-couting-techniques"><span class="toc-number">3.</span> <span class="toc-text">chapter 3 anvanced couting techniques</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-Applications-of-Recurrence-Relations"><span class="toc-number">3.1.</span> <span class="toc-text">3.1 Applications of Recurrence Relations</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/11/01/3D%E5%BB%BA%E6%A8%A1/" title="3D建模"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="3D建模"/></a><div class="content"><a class="title" href="/2021/11/01/3D%E5%BB%BA%E6%A8%A1/" title="3D建模">3D建模</a><time datetime="2021-11-01T06:16:01.000Z" title="发表于 2021-11-01 14:16:01">2021-11-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/09/23/Python%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86%E5%92%8C%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB/" title="Python数据采集和网络爬虫"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Python数据采集和网络爬虫"/></a><div class="content"><a class="title" href="/2021/09/23/Python%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86%E5%92%8C%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB/" title="Python数据采集和网络爬虫">Python数据采集和网络爬虫</a><time datetime="2021-09-23T13:04:25.000Z" title="发表于 2021-09-23 21:04:25">2021-09-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/09/23/Python%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB/" title="无题"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2021/09/23/Python%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB/" title="无题">无题</a><time datetime="2021-09-23T08:09:51.668Z" title="发表于 2021-09-23 16:09:51">2021-09-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/09/23/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/" title="离散数学"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="离散数学"/></a><div class="content"><a class="title" href="/2021/09/23/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/" title="离散数学">离散数学</a><time datetime="2021-09-23T08:07:36.000Z" title="发表于 2021-09-23 16:07:36">2021-09-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/09/23/English-Speeches-and-Debates/" title="English Speeches and Debates"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="English Speeches and Debates"/></a><div class="content"><a class="title" href="/2021/09/23/English-Speeches-and-Debates/" title="English Speeches and Debates">English Speeches and Debates</a><time datetime="2021-09-23T08:06:53.000Z" title="发表于 2021-09-23 16:06:53">2021-09-23</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By 李泽宇</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"><script>if (!window.MathJax) {
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">李泽宇</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://lzyublog.top/2021/09/23/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/">http://lzyublog.top/2021/09/23/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://lzyublog.top" target="_blank">No Born Talent</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%95%B0%E5%AD%A6/">数学</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2021/09/23/Python%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB/"><img class="prev-cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info"></div></div></a></div><div class="next-post pull-right"><a href="/2021/09/23/English-Speeches-and-Debates/"><img class="next-cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">English Speeches and Debates</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2021/09/23/%E6%A6%82%E7%8E%87%E4%B8%8E%E7%BB%9F%E8%AE%A1/" title="概率与统计"><img class="cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-09-23</div><div class="title">概率与统计</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/ava.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">李泽宇</div><div class="author-info__description">软件定义世界，数据驱动未来。</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">9</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E5%9B%BE"><span class="toc-number">1.</span> <span class="toc-text">第一章 图</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-%E5%9B%BE%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E5%90%8C%E6%9E%84"><span class="toc-number">1.1.</span> <span class="toc-text">1.3 图的表示和同构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-1-%E5%9B%BE%E7%9A%84%E8%A1%A8%E7%A4%BA"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.3.1 图的表示</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-2-%E5%9B%BE%E7%9A%84%E5%90%8C%E6%9E%84"><span class="toc-number">1.1.2.</span> <span class="toc-text">1.3.2 图的同构</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-4-%E5%9B%BE%E7%9A%84%E8%BF%9E%E9%80%9A%E6%80%A7"><span class="toc-number">1.2.</span> <span class="toc-text">1.4 图的连通性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-5-%E6%AC%A7%E6%8B%89%E9%80%9A%E8%B7%AF%E4%B8%8E%E5%93%88%E5%AF%86%E9%A1%BF%E9%80%9A%E8%B7%AF"><span class="toc-number">1.3.</span> <span class="toc-text">1.5 欧拉通路与哈密顿通路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-6-%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98"><span class="toc-number">1.4.</span> <span class="toc-text">1.6 最短路径问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-7-%E5%B9%B3%E9%9D%A2%E5%9B%BE"><span class="toc-number">1.5.</span> <span class="toc-text">1.7 平面图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-8-%E5%9B%BE%E7%9D%80%E8%89%B2"><span class="toc-number">1.6.</span> <span class="toc-text">1.8 图着色</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#chapter-2-counting"><span class="toc-number">2.</span> <span class="toc-text">chapter 2 counting</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-The-Pigeonhole-Principle"><span class="toc-number">2.1.</span> <span class="toc-text">2.2 The Pigeonhole Principle</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-5-Generalized-Permutations-and-Combinations"><span class="toc-number">2.2.</span> <span class="toc-text">2.5 Generalized Permutations and Combinations</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#chapter-3-anvanced-couting-techniques"><span class="toc-number">3.</span> <span class="toc-text">chapter 3 anvanced couting techniques</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-Applications-of-Recurrence-Relations"><span class="toc-number">3.1.</span> <span class="toc-text">3.1 Applications of Recurrence Relations</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/11/01/3D%E5%BB%BA%E6%A8%A1/" title="3D建模"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="3D建模"/></a><div class="content"><a class="title" href="/2021/11/01/3D%E5%BB%BA%E6%A8%A1/" title="3D建模">3D建模</a><time datetime="2021-11-01T06:16:01.000Z" title="发表于 2021-11-01 14:16:01">2021-11-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/09/23/Python%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86%E5%92%8C%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB/" title="Python数据采集和网络爬虫"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Python数据采集和网络爬虫"/></a><div class="content"><a class="title" href="/2021/09/23/Python%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86%E5%92%8C%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB/" title="Python数据采集和网络爬虫">Python数据采集和网络爬虫</a><time datetime="2021-09-23T13:04:25.000Z" title="发表于 2021-09-23 21:04:25">2021-09-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/09/23/Python%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB/" title="无题"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2021/09/23/Python%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB/" title="无题">无题</a><time datetime="2021-09-23T08:09:51.668Z" title="发表于 2021-09-23 16:09:51">2021-09-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/09/23/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/" title="离散数学"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="离散数学"/></a><div class="content"><a class="title" href="/2021/09/23/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/" title="离散数学">离散数学</a><time datetime="2021-09-23T08:07:36.000Z" title="发表于 2021-09-23 16:07:36">2021-09-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/09/23/English-Speeches-and-Debates/" title="English Speeches and Debates"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="English Speeches and Debates"/></a><div class="content"><a class="title" href="/2021/09/23/English-Speeches-and-Debates/" title="English Speeches and Debates">English Speeches and Debates</a><time datetime="2021-09-23T08:06:53.000Z" title="发表于 2021-09-23 16:06:53">2021-09-23</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By 李泽宇</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"><script>if (!window.MathJax) {
   window.MathJax = {
     tex: {
       inlineMath: [ ['$','$'], ["\\(","\\)"]],
