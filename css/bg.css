@@ -1,8 +1,8 @@
-#web_bg {
+#content_inner {
     background: linear-gradient(135deg, rgba(85,239,203,1) 0%,rgba(30,87,153,1) 0%,rgba(85,239,203,1) 0%,rgba(91,202,255,1) 100%);
 }
 /* 所有背景（包括首页卡片、文章页、页面页等） */
 #recent-posts>.recent-post-item,.layout>div:first-child:not(.recent-posts),.layout_post>#page,.layout_post>#post,.read-mode .layout_post>#post{
     /* 以下代表白色透明度为0.3 */
     background: rgba(255,255,255,.3);
-}
+}   
