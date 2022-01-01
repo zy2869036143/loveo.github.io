@@ -1,6 +1,6 @@
 #body-wrap {
-    background: linear-gradient(135deg, rgba(85,239,203,1) 0%,rgba(30,87,153,1) 0%,rgba(85,239,203,1) 0%,rgba(91,202,255,1) 100%);
-}
+    background: rgb(2,0,36);
+    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(85,84,108,1) 9%, rgba(133,133,150,1) 22%, rgba(98,194,220,1) 47%, rgba(179,179,190,1) 91%, rgba(0,212,255,1) 100%);}
 /* 所有背景（包括首页卡片、文章页、页面页等） */
 #recent-posts>.recent-post-item,.layout>div:first-child:not(.recent-posts),.layout_post>#page,.layout_post>#post,.read-mode .layout_post>#post{
     /* 以下代表白色透明度为0.3 */
