@@ -26,6 +26,8 @@ p {
     font-size: 17px;
     background: linear-gradient(135deg, #55efcb 0%, #1e5799 0%, #55efcb 0%, #5bcaff 100%);
 }
+
+
 .my-book-title{
     text-align: center;
     font-size: 17px;
@@ -33,16 +35,11 @@ p {
 }
 
 
-
-
-
-
 /* 翻页的书动态css实现 */
 
-
-
 .my3dbook{
-    padding-top: 0;
+  align-content: center;
+  padding-left: 200px;
 }
 .my3dbook .imgLoader {
   position: fixed;
@@ -92,10 +89,6 @@ p {
   }
 }
 
-.my3dbook{
-    align-content: center;
-    padding-left: 200px;
-}
 
 .my3dbook .container {
   position: relative;
