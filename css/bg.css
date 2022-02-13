@@ -1,4 +1,7 @@
-
+.videos{
+  width: 100%;
+  height: 500px;
+}
 /* #body-wrap {
     background: rgb(210,210,215);
     background: radial-gradient(circle, rgba(210,210,215,1) 0%, rgba(179,179,190,1) 100%, rgba(0,212,255,1) 100%);    
