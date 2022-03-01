@@ -19,7 +19,7 @@ background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(228,234,242,1) 
 #page-header{
   background: rgb(238,174,202);
   background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(228,234,242,1) 100%);
-
+}
 #mybooks, #mymovies{
     text-align: center;
     font-size: 17px;
