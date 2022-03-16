@@ -26,14 +26,17 @@ background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(228,234,242,1) 
 }
 #mybooks>caption, #mymovies>caption {
     font-size: 17px;
-    background: linear-gradient(135deg, #55efcb 0%, #1e5799 0%, #55efcb 0%, #5bcaff 100%);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(228,234,242,1) 100%);
+
+    /* background: linear-gradient(135deg, #55efcb 0%, #1e5799 0%, #55efcb 0%, #5bcaff 100%); */
 }
 
 
 .my-book-title{
     text-align: center;
     font-size: 17px;
-    background: linear-gradient(135deg, #55efcb 0%, #1e5799 0%, #55efcb 0%, #5bcaff 100%);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(228,234,242,1) 100%);
+    /* background: linear-gradient(135deg, #55efcb 0%, #1e5799 0%, #55efcb 0%, #5bcaff 100%); */
 }
 
 
